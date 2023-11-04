@@ -6,7 +6,7 @@ const showActors = async() => {
         console.log("Invalid load of json");
         return;
     }
-    
+
     const theSectionsContainer = document.createElement("div");
     theSectionsContainer.classList.add("the-sections");
     moviestarDiv.append(theSectionsContainer);
@@ -20,13 +20,12 @@ const showActors = async() => {
         section.append(h3);
 
         const img = document.createElement("img");
-        //img.src = "http://localhost:3000/" + star.img;
-        img.src="https://place-hold.it/200x200/#d3d3d3";
+        img.src = "http://localhost:3000/" + star.img;
         section.append(img);
 
         const p = document.createElement("p");
         p.innerHTML = `<strong>Age:</strong> ${star.age}<br> <strong>Height: </strong>${star.height}<br>
-        <strong>Born:</strong> ${star.born}<br> <strong>Movies: </strong> ${star.movies}`;
+        <strong>Born:</strong> ${star.born}<br> <strong>Movies: </strong> ${star.movies.join(', ')}`;
         section.append(p);
 
     });
