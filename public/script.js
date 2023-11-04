@@ -34,7 +34,7 @@ const showActors = async() => {
 
 const getActors = async() => {
     try {
-        return (await fetch("http://localhost:3000/api/movie-stars")).json();
+        return (await fetch("https://csce242-assignment13.onrender.com/api/movie-stars")).json();
     } catch (error) {
         console.log("error retrieving json");
         return "";
