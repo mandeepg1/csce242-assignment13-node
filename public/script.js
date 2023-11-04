@@ -20,7 +20,7 @@ const showActors = async() => {
         section.append(h3);
 
         const img = document.createElement("img");
-        img.src = "https://csce242-assignment13.onrender.com" + star.img;
+        img.src =  star.img;
         section.append(img);
 
         const p = document.createElement("p");
